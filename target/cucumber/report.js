@@ -6,221 +6,208 @@ formatter.feature({
   "id": "register-to-zingpoll",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "line": 21,
-  "name": "Register with registered email",
-  "description": "",
-  "id": "register-to-zingpoll;register-with-registered-email",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 20,
-      "name": "@tag2"
-    }
-  ]
-});
-formatter.step({
-  "line": 22,
-  "name": "I open ZingPoll website \u003cbrowser\u003e",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 23,
-  "name": "I click the SignIn button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "The SignIn form should be shown",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 25,
-  "name": "I click on NewUser radiobox",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "I enter fullname \u003cfullName\u003e and email \u003cemail\u003e and password \u003cpassword\u003e and confirmPassword \u003cconfirmPassword\u003e",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 27,
-  "name": "I click Register button",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 28,
-  "name": "I check the email error message \u003cerrorMessage\u003e",
-  "keyword": "And "
-});
-formatter.examples({
-  "line": 30,
-  "name": "",
-  "description": "",
-  "id": "register-to-zingpoll;register-with-registered-email;",
-  "rows": [
-    {
-      "cells": [
-        "fullName",
-        "email",
-        "password",
-        "confirmPassword",
-        "errorMessage",
-        "browser"
-      ],
-      "line": 31,
-      "id": "register-to-zingpoll;register-with-registered-email;;1"
-    },
-    {
-      "cells": [
-        "DAM DAO",
-        "daominhdam@gmail.com",
-        "123123",
-        "123123",
-        "This email was registered. Please use another one.",
-        "chrome"
-      ],
-      "line": 32,
-      "id": "register-to-zingpoll;register-with-registered-email;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
 formatter.scenario({
-  "line": 32,
-  "name": "Register with registered email",
+  "line": 6,
+  "name": "Register with empty data",
   "description": "",
-  "id": "register-to-zingpoll;register-with-registered-email;;2",
+  "id": "register-to-zingpoll;register-with-empty-data",
   "type": "scenario",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "line": 20,
-      "name": "@tag2"
+      "line": 5,
+      "name": "@tag1"
     }
   ]
 });
 formatter.step({
-  "line": 22,
-  "name": "I open ZingPoll website chrome",
-  "matchedColumns": [
-    5
-  ],
+  "line": 7,
+  "name": "I am on ZingPoll website \"chrome\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 23,
+  "line": 8,
   "name": "I click the SignIn button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 24,
+  "line": 9,
   "name": "The SignIn form should be shown",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 25,
+  "line": 10,
   "name": "I click on NewUser radiobox",
   "keyword": "And "
 });
 formatter.step({
-  "line": 26,
-  "name": "I enter fullname DAM DAO and email daominhdam@gmail.com and password 123123 and confirmPassword 123123",
-  "matchedColumns": [
-    0,
-    1,
-    2,
-    3
-  ],
+  "line": 11,
+  "name": "I enter fullname \"\" and email \"\" and password \"\" and confirmPassword \"\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 27,
+  "line": 12,
   "name": "I click Register button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 28,
-  "name": "I check the email error message This email was registered. Please use another one.",
-  "matchedColumns": [
-    4
-  ],
+  "line": 13,
+  "name": "I verify the fullname error message \"Please enter your name.\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 14,
+  "name": "I verify the email error message \"Please enter your email.\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "I verify the password error message \"Please enter your password\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "I verify the confirm password error message \"The re-type password is required and cannot be empty.\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "I verify the agree error message \"Please agree with the term!\"",
   "keyword": "And "
 });
 formatter.match({
   "arguments": [
     {
       "val": "chrome",
-      "offset": 24
+      "offset": 26
     }
   ],
-  "location": "RegisterSteps.i_open_zingpoll_website_something(String)"
+  "location": "RegisterSteps.i_am_on_ZingPoll_website(String)"
 });
 formatter.result({
-  "duration": 6156313536,
+  "duration": 8295872961,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterSteps.i_click_the_SignIn_button()"
 });
 formatter.result({
-  "duration": 189683663,
+  "duration": 230549566,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterSteps.the_SignIn_form_should_be_shown()"
 });
 formatter.result({
-  "duration": 500288317,
+  "duration": 636171934,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterSteps.i_click_on_NewUser_radiobox()"
 });
 formatter.result({
-  "duration": 2184302212,
+  "duration": 2185214283,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "DAM DAO",
-      "offset": 17
+      "val": "",
+      "offset": 18
     },
     {
-      "val": "daominhdam@gmail.com",
-      "offset": 35
+      "val": "",
+      "offset": 31
     },
     {
-      "val": "123123",
-      "offset": 69
+      "val": "",
+      "offset": 47
     },
     {
-      "val": "123123",
-      "offset": 96
+      "val": "",
+      "offset": 70
     }
   ],
   "location": "RegisterSteps.i_enter_fullname_and_email_and_password_and_confirmPassword(String,String,String,String)"
 });
 formatter.result({
-  "duration": 9134417772,
+  "duration": 8849549376,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterSteps.i_click_Login_button()"
 });
 formatter.result({
-  "duration": 204651421,
+  "duration": 176789174,
   "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "\"Please enter your name.\"",
+      "offset": 36
+    }
+  ],
+  "location": "RegisterSteps.i_verify_the_fullname_error_message(String)"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 45623037182,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "\"Please enter your email.\"",
+      "offset": 33
+    }
+  ],
+  "location": "RegisterSteps.i_verify_the_email_error_message(String)"
+});
+formatter.result({
+  "duration": 45673384422,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "\"Please enter your password\"",
+      "offset": 36
+    }
+  ],
+  "location": "RegisterSteps.i_verify_the_password_error_message(String)"
+});
+formatter.result({
+  "duration": 45655812014,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "\"The re-type password is required and cannot be empty.\"",
+      "offset": 44
+    }
+  ],
+  "location": "RegisterSteps.i_verify_the_confirm_password_error_message(String)"
+});
+formatter.result({
+  "duration": 45620845879,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "\"Please agree with the term!\"",
+      "offset": 33
+    }
+  ],
+  "location": "RegisterSteps.i_verify_the_agree_error_message(String)"
+});
+formatter.result({
+  "duration": 30247158118,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 953910335,
+  "duration": 1194429697,
   "status": "passed"
 });
 });

@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="19.323567">
-<testcase classname="Register to ZingPoll" name="Register with registered email" time="19.323567">
-<skipped><![CDATA[Given I open ZingPoll website chrome........................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="234.388815">
+<testcase classname="Register to ZingPoll" name="Register with empty data" time="234.388815">
+<system-out><![CDATA[Given I am on ZingPoll website "chrome".....................................passed
 And I click the SignIn button...............................................passed
 Then The SignIn form should be shown........................................passed
 And I click on NewUser radiobox.............................................passed
-When I enter fullname DAM DAO and email daominhdam@gmail.com and password 123123 and confirmPassword 123123.passed
+When I enter fullname "" and email "" and password "" and confirmPassword "".passed
 And I click Register button.................................................passed
-And I check the email error message This email was registered. Please use another one..undefined
-]]></skipped>
+Then I verify the fullname error message "Please enter your name."..........passed
+And I verify the email error message "Please enter your email.".............passed
+And I verify the password error message "Please enter your password"........passed
+And I verify the confirm password error message "The re-type password is required and cannot be empty.".passed
+And I verify the agree error message "Please agree with the term!"..........passed
+]]></system-out>
 </testcase>
 </testsuite>
